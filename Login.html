@@ -1,22 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Basenji</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Firebase SDKs -->
 <script type="module">
-  import {
-    auth,
-    signInWithEmailAndPassword
-  } from './firebase-config.js';
+  // Firebase v9+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-  const form = document.getElementById("loginForm");
+  const firebaseConfig = {
+    apiKey: "YOUR-API-KEY",
+    authDomain: "YOUR.firebaseapp.com",
+    projectId: "YOUR-ID",
+    storageBucket: "YOUR.appspot.com",
+    messagingSenderId: "YOUR-ID",
+    appId: "YOUR-ID"
+  };
 
-  form.addEventListener("submit", async (e) => {
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  window.firebaseAuth = auth;
+  window.firebaseFns = {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+  };
+</script>
+
+</head>
+<body class="auth">
+<hr>
+<h2>Create an Account</h2>
+<form id="registerForm">
+  <input type="email" id="regEmail" placeholder="Email" required />
+  <input type="password" id="regPassword" placeholder="Password" required />
+  <button type="submit">Register</button>
+</form>
+<script type="module">
+  const auth = window.firebaseAuth;
+  const { createUserWithEmailAndPassword } = window.firebaseFns;
+
+  document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = form["loginEmail"].value;
-    const password = form["loginPassword"].value;
+    const email = document.getElementById('regEmail').value;
+    const password = document.getElementById('regPassword').value;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      alert("Login successful");
+      const userCred = await createUserWithEmailAndPassword(auth, email, password);
+      alert("Registered successfully!");
       window.location.href = "index.html";
-    } catch (err) {
-      alert(err.message);
+    } catch (error) {
+      alert("Error: " + error.message);
     }
   });
 </script>
+<h2>Login to Basenji</h2>
+<form id="loginForm">
+  <input type="email" id="loginEmail" placeholder="Email" required />
+  <input type="password" id="loginPassword" placeholder="Password" required />
+  <button type="submit">Login</button>
+</form>
+<script type="module">
+  const auth = window.firebaseAuth;
+  const { signInWithEmailAndPassword } = window.firebaseFns;
+
+  document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    try {
+      const userCred = await signInWithEmailAndPassword(auth, email, password);
+      alert("Login successful!");
+      window.location.href = "index.html";
+    } catch (error) {
+      alert("Login failed: " + error.message);
+    }
+  });
+</script>
+
+</body>
+</html>
