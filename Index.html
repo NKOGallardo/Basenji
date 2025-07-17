@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basenji Clothing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Basenji</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Elevate Your Street Style</h1>
+      <p>Basenji – Where bold meets minimal.</p>
+      <a href="#shop" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="shop" class="products">
+    <h2>Featured Collection</h2>
+    <div class="product-grid">
+     <div class="product-card">
+  <img src="https://via.placeholder.com/300x400" alt="Hoodie">
+  <h3>Black Basenji Hoodie</h3>
+  <p>R399</p>
+  <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
+</div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="T-Shirt">
+        <h3>Oversized White Tee</h3>
+        <p>R199</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x400" alt="Cap">
+        <h3>Signature Cap</h3>
+        <p>R149</p>
+      </div>
+      <section class="product-detail">
+  <img src="https://via.placeholder.com/500x600" alt="Product">
+  <div class="info">
+    <h2>Black Basenji Hoodie</h2>
+    <p>R399</p>
+    <p>Minimalist hoodie for bold moves. Made from 100% cotton.</p>
+    <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
+  </div>
+</section>
+
+    </div>
+    <!-- Cart Button -->
+<button id="cartBtn" class="cart-btn">🛒</button>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar" class="cart-sidebar">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <p>Total: R<span id="cartTotal">0</span></p>
+  <button class="btn checkout">Checkout</button>
+</div>
+
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Basenji</h2>
+    <p>
+      Born in the heart of Joburg, Basenji is a youth-driven streetwear brand built for movement, expression, and unapologetic style.
+      Each piece is designed with intention — minimal but loud.
+    </p>
+  </section>
+
+  <footer class="footer" id="contact">
+    <form action="send.php" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+  <button type="submit" class="btn">Send</button>
+</form>
+
+    <p>&copy; 2025 Basenji Clothing. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </div>
+    <p>Deverlped by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
+  </footer>
+
+</body>
+</html>
