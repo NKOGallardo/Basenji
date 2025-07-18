@@ -240,9 +240,15 @@ body {
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  border: none;
+  border: 1px solid #000000;
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.l {
+  color: #ff6b6b;
+  text-decoration: none;
 }
 
 .footer a {
