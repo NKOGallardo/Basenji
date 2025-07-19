@@ -9,7 +9,11 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Basenji</div>
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        Basenji
+      </a>
+    </div>
     <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
     <nav>
       <ul class="nav-links" id="navLinks">
@@ -58,12 +62,7 @@
     </div>
     <p>Developed by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
   </footer>
-  <script>
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
+  <script href="script.js">
   </script>
 </body>
 </html>
