@@ -60,6 +60,11 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
+  
+  .meaning {
+    margin-top: 100px;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -418,6 +423,8 @@ body {
 .box-b {
   margin-top: 200px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .b-img {
@@ -515,6 +522,18 @@ body {
   }
   .map-responsive iframe {
     border-radius: 8px;
+  }
+}
+
+@media (max-width: 920px) {
+  .box-b {
+    display: block;
+  }
+
+  .b-img {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
