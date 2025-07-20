@@ -8,21 +8,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
+
+  <header>
+    <nav class="navbar">
     <div class="logo">
-      <a href="index.html" class="logo-link">
-        Basenji
-      </a>
+      <img class="logo-img" src="images/Logo.jpg" alt="logo">
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
  <main>
   <section class="about">
     <h2>About Basenji Clothing</h2>
@@ -36,12 +40,15 @@
       Every piece is crafted with care, using premium materials and ethical practices. 
       Join our community and elevate your street style with Basenji.
     </p>
-    <h2 class="topic">what is a <a class="logo-link2" href="Index.html">Basenji</a>?</h2>
-    <div class="about-q" data-ios="fade-up">
+    
+    <div class="box-b" data-ios="fade-up">
+        <div class="text">
+          <h2>The founder of <a class="logo-link2" href="Index.html">Basenji</a>?</h2>
+          <p>The Basenji is a unique dog breed, often called the "barkless dog" because they don't bark like other breeds, but instead make a yodeling sound</p>
+        </div>  
       <frame>
-        <img class="b-img" src="images/Basenjii.jpeg" alt="Basenji dog with upright ears and a calm, alert expression, reddish-brown and white coat, sitting outdoors with green foliage in the background" />
+        <img class="b-img" src="images/sabza.jpg" alt="Basenji dog with upright ears and a calm, alert expression, reddish-brown and white coat, sitting outdoors with green foliage in the background" />
       </frame>
-      <p class="text">The Basenji is a unique dog breed, often called the "barkless dog" because they don't bark like other breeds, but instead make a yodeling sound</p>
     </div>
   </section>
  </main>
@@ -49,71 +56,21 @@
   <footer class="footer">
     <p>&copy; 2025 Basenji Clothing. All rights reserved.</p>
     <div class="socials">
-      <a href="#">Instagram</a> |
+      <a href="https://www.instagram.com/bas3njiworld/">Instagram</a> |
       <a href="#">Facebook</a> |
       <a href="#">TikTok</a>
     </div>
     <p>Developed by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
   </footer>
-  <script href="script.js">
-  </script>
-</body><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Basenji Clothing</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html" class="logo-link">
-        Basenji
-      </a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
- <main>
-  <section class="about">
-    <h2>About Basenji Clothing</h2>
-    <p>
-      Basenji Clothing is a streetwear brand inspired by the bold, independent spirit of the Basenji dog. 
-      We blend minimal design with striking details to create apparel that stands out in any crowd. 
-      Our mission is to empower you to express your unique style with confidence and comfort.
-    </p>
-    <p>
-      Founded in 2025 by Sabelo, Basenji Clothing is committed to quality, sustainability, and originality. 
-      Every piece is crafted with care, using premium materials and ethical practices. 
-      Join our community and elevate your street style with Basenji.
-    </p>
-    <h2 class="topic">what is a <a class="logo-link2" href="Index.html">Basenji</a>?</h2>
-    <div class="about-q" data-ios="fade-up">
-      <frame>
-        <img class="b-img" src="images/Basenjii.jpeg" alt="Basenji dog with upright ears and a calm, alert expression, reddish-brown and white coat, sitting outdoors with green foliage in the background" />
-      </frame>
-      <p class="text">The Basenji is a unique dog breed, often called the "barkless dog" because they don't bark like other breeds, but instead make a yodeling sound</p>
-    </div>
-  </section>
- </main>
+<script src="script.js">
+  
+   const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-  <footer class="footer">
-    <p>&copy; 2025 Basenji Clothing. All rights reserved.</p>
-    <div class="socials">
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">TikTok</a>
-    </div>
-    <p>Developed by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
-  </footer>
-  <script href="script.js">
-  </script>
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
+</script>
 </body>
+</html>
