@@ -4,51 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Basenji Clothing</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header class="navbar">
+  <header>
+    <nav class="navbar">
     <div class="logo">
-      <a href="index.html" class="logo-link">
-        Basenji
-      </a>
+      <img class="logo-img" src="images/Logo.jpg" alt="logo">
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
 
   <section id="shop" class="products">
     <h2>Featured Collection</h2>
     <div class="product-grid">
     <div class="product-card">
-    <img src="https://via.placeholder.com/300x400" alt="Hoodie">
-    <h3>Black Basenji Hoodie</h3>
-    <p>R399</p>
-    <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
+      <img  src="images/hoodie.jpeg" alt="Hoodie">
+      <h3>Black Basenji Hoodie</h3>
+      <p>R399</p>
+      <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
     </div>
-
       <div class="product-card">
-        <img src="https://via.placeholder.com/300x400" alt="T-Shirt">
+        <img class="man" src="images/tshirt.jpeg" alt="T-Shirt">
         <h3>Oversized White Tee</h3>
         <p>R199</p>
-        <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
+        <button class="btn add-to-cart" data-name="White Tee" data-price="199">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/300x400" alt="Cap">
+        <img src="images/cap.jpeg" alt="Cap">
         <h3>Signature Cap</h3>
         <p>R149</p>
-    <button class="btn add-to-cart" data-name="Black Hoodie" data-price="399">Add to Cart</button>
+        <button class="btn add-to-cart" data-name="Signature Cap" data-price="149">Add to Cart</button>
       </div>
-</section>
-<button id="cartBtn" class="cart-btn">🛒</button>
-<script href="script.js"></script>
+    </div>
+    <button id="cartBtn" class="cart-btn">🛒(<span id="cartCount">0</span>)</button>
+    </section>
+
+  <!-- The cart -->
+   <div class="cart-modal hidden" id="cartModal">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: R<span id="cartTotal">0</span></p>
+    <button id="closeCart" class="btn">Close</button>
+    <div>
+       <a href="contact.html"><button class="btn">Order</button></a>
+    </div>
+
+       <!-- calculator -->
+       <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div id="expression" class="expression"></div>
+                <div id="result" class="result">=0</div>
+                
+            </div>
+            <div class="buttons">
+                <button class="button">Ac</button>
+                <button class="button">+/-</button>
+                <button class="button">%</button>
+                <button class="button operator">/</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button operator">x</button>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button operator">-</button>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button operator">+</button>
+                <button class="button">0</button>
+                <button class="button">.</button>
+                <button class="button operator equal">=</button>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+
+    <footer class="footer">
+    <p>&copy; 2025 Basenji Clothing. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/bas3njiworld/">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
+    </div>
+    <p>Developed by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
+  </footer>
+<script src="script.js"></script>
 </body>
-</html>  
+</html>
