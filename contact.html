@@ -8,21 +8,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
+
+  <header>
+    <nav class="navbar">
     <div class="logo">
-      <a href="index.html" class="logo-link">
-        Basenji
-      </a>
+      <img class="logo-img" src="images/Logo.jpg" alt="logo">
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
 
   <section class="about">
     <h2>Contact Basenji Clothing</h2>
@@ -36,33 +40,44 @@
     <div style="margin-top:2rem;">
       <h3>Or reach us on social media:</h3>
       <div class="socials">
-        <a class="l" href="#">Instagram</a> |
+        <a class="l" href="https://www.instagram.com/bas3njiworld/">Instagram</a> |
         <a class="l" href="#">Facebook</a> |
         <a class="l" href="#">TikTok</a>
       </div>
     </div>
     <div style="margin-top:2rem;">
       <h3>Our Location</h3>
-      <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=18.4233%2C-33.9189%2C18.4233%2C-33.9189&amp;layer=mapnik"
-        style="border:1px solid #ccc;width:100%;height:200px;border-radius:10px;"
-        allowfullscreen=""
-        loading="lazy"
+      <div class="map-responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.4834308535173!2d27.849721899999995!3d-26.24596919999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a7265aac61ed%3A0xb7d354d4be8bff50!2sBAS3NJIworld.clo!5e0!3m2!1sen!2sza!4v1752948810620!5m2!1sen!2sza"
+        width="1000" 
+        height="100" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
     <p>&copy; 2025 Basenji Clothing. All rights reserved.</p>
     <div class="socials">
-      <a href="#">Instagram</a> |
+      <a href="https://www.instagram.com/bas3njiworld/">Instagram</a> |
       <a href="#">Facebook</a> |
       <a href="#">TikTok</a>
     </div>
     <p>Developed by <a href="https://nkogallardo.github.io/Personal-website/my%20web.html">Ntobeko</a></p>
   </footer>
   <script href="script.js">
+    
+   const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('open');
+    });
   </script>
 </body>
 </html>
